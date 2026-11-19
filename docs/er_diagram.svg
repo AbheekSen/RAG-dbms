@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="620" font-family="Segoe UI,Arial,sans-serif" font-size="12">
+<rect width="800" height="620" fill="#f8fafc"/>
+<text x="40" y="24" font-size="16" font-weight="bold" fill="#1e293b">RAG Platform - ER Diagram (1 ─── N, parent → child via FK)</text>
+<path d="M240,75.0 L300,115.0" stroke="#6366f1" stroke-width="1.5" fill="none"/>
+<text x="247" y="76" fill="#6366f1">1</text>
+<text x="293" y="106" fill="#6366f1">N</text>
+<path d="M500,115.0 L560,125.0" stroke="#6366f1" stroke-width="1.5" fill="none"/>
+<text x="507" y="112" fill="#6366f1">1</text>
+<text x="553" y="120" fill="#6366f1">N</text>
+<path d="M660.0,210 L660.0,290" stroke="#6366f1" stroke-width="1.5" fill="none"/>
+<text x="660" y="216" fill="#6366f1">1</text>
+<text x="660" y="276" fill="#6366f1">N</text>
+<path d="M400.0,190 L400.0,290" stroke="#6366f1" stroke-width="1.5" fill="none"/>
+<text x="400" y="198" fill="#6366f1">1</text>
+<text x="400" y="274" fill="#6366f1">N</text>
+<path d="M400.0,400 L400.0,460" stroke="#6366f1" stroke-width="1.5" fill="none"/>
+<text x="400" y="403" fill="#6366f1">1</text>
+<text x="400" y="449" fill="#6366f1">N</text>
+<path d="M300,115.0 L140.0,290" stroke="#6366f1" stroke-width="1.5" fill="none"/>
+<text x="281" y="132" fill="#6366f1">1</text>
+<text x="159" y="265" fill="#6366f1">N</text>
+<rect x="40" y="40" width="200" height="70" rx="8" fill="#fff" stroke="#c7d2fe" stroke-width="1.5"/>
+<rect x="40" y="40" width="200" height="26" rx="8" fill="#4f46e5"/><text x="50" y="58" fill="#fff" font-weight="bold">roles</text>
+<text x="50" y="86" fill="#b45309">id PK</text>
+<text x="50" y="106" fill="#334155">name UK</text>
+<rect x="300" y="40" width="200" height="150" rx="8" fill="#fff" stroke="#c7d2fe" stroke-width="1.5"/>
+<rect x="300" y="40" width="200" height="26" rx="8" fill="#4f46e5"/><text x="310" y="58" fill="#fff" font-weight="bold">users</text>
+<text x="310" y="86" fill="#b45309">id PK</text>
+<text x="310" y="106" fill="#334155">name</text>
+<text x="310" y="126" fill="#334155">email UK</text>
+<text x="310" y="146" fill="#334155">password_hash</text>
+<text x="310" y="166" fill="#4f46e5">role_id FK</text>
+<text x="310" y="186" fill="#334155">created_at</text>
+<rect x="560" y="40" width="200" height="170" rx="8" fill="#fff" stroke="#c7d2fe" stroke-width="1.5"/>
+<rect x="560" y="40" width="200" height="26" rx="8" fill="#4f46e5"/><text x="570" y="58" fill="#fff" font-weight="bold">documents</text>
+<text x="570" y="86" fill="#b45309">id PK</text>
+<text x="570" y="106" fill="#4f46e5">user_id FK</text>
+<text x="570" y="126" fill="#334155">filename</text>
+<text x="570" y="146" fill="#334155">file_type</text>
+<text x="570" y="166" fill="#334155">status</text>
+<text x="570" y="186" fill="#334155">chunk_count</text>
+<text x="570" y="206" fill="#334155">created_at</text>
+<rect x="560" y="290" width="200" height="170" rx="8" fill="#fff" stroke="#c7d2fe" stroke-width="1.5"/>
+<rect x="560" y="290" width="200" height="26" rx="8" fill="#4f46e5"/><text x="570" y="308" fill="#fff" font-weight="bold">document_chunks</text>
+<text x="570" y="336" fill="#b45309">id PK</text>
+<text x="570" y="356" fill="#4f46e5">document_id FK</text>
+<text x="570" y="376" fill="#4f46e5">user_id FK</text>
+<text x="570" y="396" fill="#334155">chunk_index</text>
+<text x="570" y="416" fill="#334155">page_number</text>
+<text x="570" y="436" fill="#334155">content</text>
+<text x="570" y="456" fill="#334155">embedding vector(768)</text>
+<rect x="300" y="290" width="200" height="110" rx="8" fill="#fff" stroke="#c7d2fe" stroke-width="1.5"/>
+<rect x="300" y="290" width="200" height="26" rx="8" fill="#4f46e5"/><text x="310" y="308" fill="#fff" font-weight="bold">conversations</text>
+<text x="310" y="336" fill="#b45309">id PK</text>
+<text x="310" y="356" fill="#4f46e5">user_id FK</text>
+<text x="310" y="376" fill="#334155">title</text>
+<text x="310" y="396" fill="#334155">created_at</text>
+<rect x="300" y="460" width="200" height="150" rx="8" fill="#fff" stroke="#c7d2fe" stroke-width="1.5"/>
+<rect x="300" y="460" width="200" height="26" rx="8" fill="#4f46e5"/><text x="310" y="478" fill="#fff" font-weight="bold">messages</text>
+<text x="310" y="506" fill="#b45309">id PK</text>
+<text x="310" y="526" fill="#4f46e5">conversation_id FK</text>
+<text x="310" y="546" fill="#334155">role</text>
+<text x="310" y="566" fill="#334155">content</text>
+<text x="310" y="586" fill="#334155">sources jsonb</text>
+<text x="310" y="606" fill="#334155">created_at</text>
+<rect x="40" y="290" width="200" height="130" rx="8" fill="#fff" stroke="#c7d2fe" stroke-width="1.5"/>
+<rect x="40" y="290" width="200" height="26" rx="8" fill="#4f46e5"/><text x="50" y="308" fill="#fff" font-weight="bold">access_logs</text>
+<text x="50" y="336" fill="#b45309">id PK</text>
+<text x="50" y="356" fill="#4f46e5">user_id FK</text>
+<text x="50" y="376" fill="#334155">action</text>
+<text x="50" y="396" fill="#334155">detail</text>
+<text x="50" y="416" fill="#334155">created_at</text>
+</svg>
